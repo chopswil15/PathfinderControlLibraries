@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{039EFC5F-EA94-4F55-8D7B-0C571569E000}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassDetails</RootNamespace>
+    <AssemblyName>ClassDetails</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bloodlines, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Dynamic\Bloodlines.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassFoundation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\ClassFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="ClericDomains, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Dynamic\ClericDomains.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonStatBlockInfo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\CommonStatBlockInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="OnGoing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\OnGoing.dll</HintPath>
+    </Reference>
+    <Reference Include="OracleMysteries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Dynamic\OracleMysteries.dll</HintPath>
+    </Reference>
+    <Reference Include="PathfinderGlobals">
+      <HintPath>..\..\Libraries\PathfinderGlobals.dll</HintPath>
+    </Reference>
+    <Reference Include="Patrons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Dynamic\Patrons.dll</HintPath>
+    </Reference>
+    <Reference Include="ReflectionFoundation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\ReflectionFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Skills, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Skills.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.5.2</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>4.5.2</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>4.5.2</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utilities">
+      <HintPath>..\..\Libraries\Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedClassGuide\Bloodrager.cs" />
+    <Compile Include="AdvancedClassGuide\Investigator.cs" />
+    <Compile Include="AdvancedClassGuide\ExWarpriest.cs" />
+    <Compile Include="AdvancedClassGuide\Brawler.cs" />
+    <Compile Include="AdvancedClassGuide\Arcanist.cs" />
+    <Compile Include="AdvancedClassGuide\Hunter.cs" />
+    <Compile Include="Prestige\DiscipleOfOrcus.cs" />
+    <Compile Include="Mythic\Marshal.cs" />
+    <Compile Include="Prestige\Archwizard.cs" />
+    <Compile Include="Prestige\BrotherOfTheSeal.cs" />
+    <Compile Include="Prestige\ExBrotherOfTheSeal.cs" />
+    <Compile Include="Prestige\Justicar.cs" />
+    <Compile Include="Prestige\LionBlade.cs" />
+    <Compile Include="Phantom.cs" />
+    <Compile Include="Prestige\HorizonWalker.cs" />
+    <Compile Include="Prestige\BattleHerald.cs" />
+    <Compile Include="Prestige\BellflowerTiller.cs" />
+    <Compile Include="Eidolon.cs" />
+    <Compile Include="OccultAdventures\Medium.cs" />
+    <Compile Include="OccultAdventures\Spiritualist.cs" />
+    <Compile Include="Prestige\HolyVindicator.cs" />
+    <Compile Include="Prestige\Exalted.cs" />
+    <Compile Include="OccultAdventures\Mesmerist.cs" />
+    <Compile Include="OccultAdventures\KineticistSpecialist\Hydrokineticist.cs" />
+    <Compile Include="OccultAdventures\Kineticist.cs" />
+    <Compile Include="Mythic\Guardian.cs" />
+    <Compile Include="OccultAdventures\Occultist.cs" />
+    <Compile Include="Prestige\ExProphetOfKalistrade.cs" />
+    <Compile Include="Prestige\MammothRider.cs" />
+    <Compile Include="Prestige\MagaambyanArcanist.cs" />
+    <Compile Include="Prestige\KnightOfOzem.cs" />
+    <Compile Include="Prestige\GrayGardener.cs" />
+    <Compile Include="Prestige\DaggermarkPoisoner.cs" />
+    <Compile Include="Prestige\Cyphermage.cs" />
+    <Compile Include="Prestige\AspisAgent.cs" />
+    <Compile Include="Prestige\ArclordOfNex.cs" />
+    <Compile Include="Prestige\AldoriSwordlord.cs" />
+    <Compile Include="AnimalCompanion.cs" />
+    <Compile Include="Mythic\Champion.cs" />
+    <Compile Include="Prestige\BlackfireAdept.cs" />
+    <Compile Include="Mythic\Archmage.cs" />
+    <Compile Include="Core\Prestige\ArcaneArcher.cs" />
+    <Compile Include="Mythic\Trickster.cs" />
+    <Compile Include="Prestige\ProphetOfKalistrade.cs" />
+    <Compile Include="Prestige\RazmiranPriest.cs" />
+    <Compile Include="Prestige\Shieldmarshal.cs" />
+    <Compile Include="Prestige\SleeplessDetective.cs" />
+    <Compile Include="AdvancedClassGuide\Swashbuckler.cs" />
+    <Compile Include="AdvancedClassGuide\Warpriest.cs" />
+    <Compile Include="AdvancedClassGuide\Slayer.cs" />
+    <Compile Include="AdvancedClassGuide\Skald.cs" />
+    <Compile Include="Prestige\StalwartDefender.cs" />
+    <Compile Include="Prestige\Technomancer.cs" />
+    <Compile Include="AdvancedClassGuide\Shaman.cs" />
+    <Compile Include="OccultAdventures\Psychic.cs" />
+    <Compile Include="Prestige\UmbralCourtAgent.cs" />
+    <Compile Include="Core\PC\WizardSpecialist\Universalist.cs" />
+    <Compile Include="Prestige\RageProphet.cs" />
+    <Compile Include="Core\PC\WizardSpecialist\ThassilonianConjurer.cs" />
+    <Compile Include="OccultAdventures\KineticistSpecialist\Pyrokineticist.cs" />
+    <Compile Include="Prestige\StormKindler .cs" />
+    <Compile Include="Unchained\UnchainedSummoner.cs" />
+    <Compile Include="Vigilante.cs" />
+    <Compile Include="Core\PC\WizardSpecialist\WaterElementalistWizard.cs" />
+    <Compile Include="Core\PC\WizardSpecialist\WaterElementalist.cs" />
+    <Compile Include="Wrappers\BloodlineReflectionWrapper.cs" />
+    <Compile Include="Core\Prestige\ArcaneTrickster.cs" />
+    <Compile Include="Core\PC\WizardSpecialist\AirElementalistWizard.cs" />
+    <Compile Include="APG\Antipaladin.cs" />
+    <Compile Include="Core\PC\WizardSpecialist\EarthElementalistWizard.cs" />
+    <Compile Include="Core\Prestige\EldritchKnight.cs" />
+    <Compile Include="Core\PC\ExBarbarian.cs" />
+    <Compile Include="Mythic\Hierophant.cs" />
+    <Compile Include="Prestige\LowTemplar.cs" />
+    <Compile Include="Prestige\Demoniac.cs" />
+    <Compile Include="DomainUltility.cs" />
+    <Compile Include="Prestige\ExDemoniac.cs" />
+    <Compile Include="Prestige\HellknightSignifer.cs" />
+    <Compile Include="Prestige\InnerSeaPirate.cs" />
+    <Compile Include="Wrappers\MysteryReflectionWrapper.cs" />
+    <Compile Include="Core\Prestige\MysticTheurge.cs" />
+    <Compile Include="Wrappers\PatronReflectionWrapper.cs" />
+    <Compile Include="Prestige\Riftwarden.cs" />
+    <Compile Include="UltimateCombat\Gunslinger.cs" />
+    <Compile Include="Prestige\Bloatmage.cs" />
+    <Compile Include="Core\PC\WizardSpecialist\Abjurer.cs" />
+    <Compile Include="APG\Alchemist.cs" />
+    <Compile Include="APG\Cavalier.cs" />
+    <Compile Include="Core\PC\WizardSpecialist\Conjurer.cs" />
+    <Compile Include="Core\Prestige\Assassin.cs" />
+    <Compile Include="Wrappers\ClassPowerReflectionWrapper.cs" />
+    <Compile Include="Core\NPC\Adept.cs" />
+    <Compile Include="Core\NPC\Aristocrat.cs" />
+    <Compile Include="Core\NPC\Commoner.cs" />
+    <Compile Include="Core\PC\Barbarian.cs" />
+    <Compile Include="Core\PC\Bard.cs" />
+    <Compile Include="Core\PC\Cleric.cs" />
+    <Compile Include="Core\PC\Druid.cs" />
+    <Compile Include="Core\PC\Fighter.cs" />
+    <Compile Include="Core\PC\Monk.cs" />
+    <Compile Include="Core\PC\Paladin.cs" />
+    <Compile Include="Core\NPC\Expert.cs" />
+    <Compile Include="Core\PC\WizardSpecialist\Diviner.cs" />
+    <Compile Include="Wrappers\DomainReflectionWrapper.cs" />
+    <Compile Include="Core\PC\WizardSpecialist\Evoker.cs" />
+    <Compile Include="APG\Inquisitor.cs" />
+    <Compile Include="APG\Oracle.cs" />
+    <Compile Include="Core\PC\ExPaladin.cs" />
+    <Compile Include="Core\PC\ExCleric.cs" />
+    <Compile Include="Core\PC\ExDruid.cs" />
+    <Compile Include="Core\PC\ExMonk.cs" />
+    <Compile Include="Core\PC\WizardSpecialist\Illusionist .cs" />
+    <Compile Include="Core\PC\WizardSpecialist\Necromancer.cs" />
+    <Compile Include="Core\PC\WizardSpecialist\Enchanter.cs" />
+    <Compile Include="Core\Prestige\PathfinderChronicler.cs" />
+    <Compile Include="Core\Prestige\Loremaster.cs" />
+    <Compile Include="Prestige\MasterSpy.cs" />
+    <Compile Include="Core\Prestige\Duelist.cs" />
+    <Compile Include="Prestige\Hellknight.cs" />
+    <Compile Include="Prestige\Harrower.cs" />
+    <Compile Include="APG\ExInquisitor.cs" />
+    <Compile Include="Core\Prestige\DragonDisciple.cs" />
+    <Compile Include="APG\ExAntipaladin.cs" />
+    <Compile Include="UltimateCombat\Ninja.cs" />
+    <Compile Include="UltimateCombat\Samurai.cs" />
+    <Compile Include="UltimateMagic\Magus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\PC\Ranger.cs" />
+    <Compile Include="Core\PC\Rogue.cs" />
+    <Compile Include="Core\PC\Sorcerer.cs" />
+    <Compile Include="Core\PC\Wizard.cs" />
+    <Compile Include="Core\NPC\Warrior.cs" />
+    <Compile Include="APG\Summoner.cs" />
+    <Compile Include="APG\Witch.cs" />
+    <Compile Include="Core\PC\WizardSpecialist\Transmuter.cs" />
+    <Compile Include="Core\Prestige\Shadowdancer.cs" />
+    <Compile Include="Prestige\RedMantisAssassin.cs" />
+    <Compile Include="Prestige\WinterWitch.cs" />
+    <Compile Include="Prestige\ZealotOfOrcus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UltimateIntrigue\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y "$(ProjectDir)$(OutDir)$(TargetFileName)" "..\..\..\..\Libraries\Dynamic\"
+xcopy /y "$(TargetDir)$(TargetName).pdb" "..\..\..\..\Libraries\Dynamic\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

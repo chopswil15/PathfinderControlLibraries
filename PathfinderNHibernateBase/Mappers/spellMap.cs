@@ -1,0 +1,105 @@
+using System; 
+using System.Collections.Generic; 
+using System.Text; 
+using FluentNHibernate.Mapping;
+using PathfinderDomains;
+
+namespace PathfinderNHibernateBase
+{   
+    public class spellMap : ClassMap<spell>
+	{        
+        public spellMap() {
+			Table("spell");			
+			Id(x => x.id).GeneratedBy.Identity().Column("id");
+			Map(x => x.name).Column("name").Not.Nullable().Length(50);
+			Map(x => x.school).Column("school").Not.Nullable().Length(50);
+			Map(x => x.subschool).Column("subschool").Length(50);
+			Map(x => x.descriptor).Column("descriptor").Length(50);
+			Map(x => x.spell_level).Column("spell_level").Not.Nullable().Length(220);
+			Map(x => x.casting_time).Column("casting_time").Not.Nullable().Length(50);
+			Map(x => x.components).Column("components").Not.Nullable().Length(200);
+			Map(x => x.costly_components).Column("costly_components").Not.Nullable();
+			Map(x => x.range).Column("range").Length(75);
+			Map(x => x.area).Column("area").Length(100);
+			Map(x => x.effect).Column("effect").Length(175);
+			Map(x => x.targets).Column("targets").Length(200);
+			Map(x => x.duration).Column("duration").Not.Nullable().Length(90);
+			Map(x => x.dismissible).Column("dismissible").Not.Nullable();
+			Map(x => x.shapeable).Column("shapeable").Not.Nullable();
+			Map(x => x.saving_throw).Column("saving_throw").Length(75);
+			Map(x => x.spell_resistence).Column("spell_resistence").Length(50);
+            Map(x => x.description).Column("description").CustomSqlType("varchar(max)").Length(int.MaxValue);
+            Map(x => x.description_formated).Column("description_formated").CustomSqlType("varchar(max)").Length(int.MaxValue);
+			Map(x => x.source).Column("source").Not.Nullable().Length(50);
+            Map(x => x.full_text).Column("full_text").CustomSqlType("varchar(max)").Length(int.MaxValue);
+			Map(x => x.verbal).Column("verbal").Not.Nullable();
+			Map(x => x.somatic).Column("somatic").Not.Nullable();
+			Map(x => x.material).Column("material").Not.Nullable();
+			Map(x => x.focus).Column("focus").Not.Nullable();
+			Map(x => x.divine_focus).Column("divine_focus").Not.Nullable();
+			Map(x => x.sor).Column("sor");
+			Map(x => x.wiz).Column("wiz");
+			Map(x => x.cleric).Column("cleric");
+			Map(x => x.druid).Column("druid");
+			Map(x => x.ranger).Column("ranger");
+			Map(x => x.bard).Column("bard");
+			Map(x => x.paladin).Column("paladin");
+			Map(x => x.alchemist).Column("alchemist");
+			Map(x => x.summoner).Column("summoner");
+			Map(x => x.witch).Column("witch");
+			Map(x => x.inquisitor).Column("inquisitor");
+			Map(x => x.oracle).Column("oracle");
+			Map(x => x.magus).Column("magus");
+			Map(x => x.antipaladin).Column("antipaladin");
+            Map(x => x.adept).Column("adept");
+			Map(x => x.SLA_Level).Column("SLA_Level");
+			Map(x => x.deity).Column("deity").Length(25);
+			Map(x => x.linktext).Column("linktext").Length(200);
+			Map(x => x.domain).Column("domain").Length(50);
+			Map(x => x.short_description).Column("short_description").Length(160);
+			Map(x => x.acid).Column("acid");
+			Map(x => x.air).Column("air");
+			Map(x => x.chaotic).Column("chaotic");
+			Map(x => x.cold).Column("cold");
+			Map(x => x.curse).Column("curse");
+			Map(x => x.darkness).Column("darkness");
+			Map(x => x.death).Column("death");
+			Map(x => x.disease).Column("disease");
+			Map(x => x.earth).Column("earth");
+			Map(x => x.electricity).Column("electricity");
+			Map(x => x.emotion).Column("emotion");
+			Map(x => x.evil).Column("evil");
+			Map(x => x.fear).Column("fear");
+			Map(x => x.fire).Column("fire");
+			Map(x => x.force).Column("force");
+			Map(x => x.good).Column("good");
+			Map(x => x.language_dependent).Column("language_dependent");
+			Map(x => x.lawful).Column("lawful");
+			Map(x => x.light).Column("light");
+			Map(x => x.mind_affecting).Column("mind_affecting");
+			Map(x => x.pain).Column("pain");
+			Map(x => x.poison).Column("poison");
+			Map(x => x.shadow).Column("shadow");
+			Map(x => x.sonic).Column("sonic");
+			Map(x => x.water).Column("water");
+			Map(x => x.material_costs).Column("material_costs");
+            Map(x => x.mythic_text).Column("mythic_text").Length(900);
+            Map(x => x.mythic).Column("mythic").Not.Nullable();
+            Map(x => x.augmented).Column("augmented").Length(500);
+            Map(x => x.bloodrager).Column("bloodrager");
+            Map(x => x.shaman).Column("shaman");
+            Map(x => x.psychic).Column("psychic");
+            Map(x => x.medium).Column("medium");
+            Map(x => x.mesmerist).Column("mesmerist");
+            Map(x => x.occultist).Column("occultist");
+            Map(x => x.spiritualist).Column("spiritualist");
+            Map(x => x.skald).Column("skald");
+            Map(x => x.investigator).Column("investigator");
+            Map(x => x.hunter).Column("hunter");
+            Map(x => x.haunt_statistics).Column("haunt_statistics").Length(225);
+            Map(x => x.ruse).Column("ruse");
+            Map(x => x.draconic).Column("draconic");
+            Map(x => x.meditative).Column("meditative");
+        }
+    }
+}

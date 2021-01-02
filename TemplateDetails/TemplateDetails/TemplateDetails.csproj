@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8676EEC-789A-4B78-92B2-04859A5F323F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TemplateDetails</RootNamespace>
+    <AssemblyName>TemplateDetails</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonStatBlockInfo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\CommonStatBlockInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="CreatureTypeDetails">
+      <HintPath>..\..\..\..\Visual Studio 2015\Projects\Libraries\CreatureTypeDetails.dll</HintPath>
+    </Reference>
+    <Reference Include="CreatureTypeFoundation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\CreatureTypeFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="CreatureTypeManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\CreatureTypeManager.dll</HintPath>
+    </Reference>
+    <Reference Include="PathfinderGlobals">
+      <HintPath>..\..\Libraries\PathfinderGlobals.dll</HintPath>
+    </Reference>
+    <Reference Include="StatBlockCommon">
+      <HintPath>..\..\..\..\Visual Studio 2015\Projects\Libraries\StatBlockCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TemplateFoundation">
+      <HintPath>..\..\Libraries\TemplateFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Utilities">
+      <HintPath>..\..\Libraries\Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedBestiary\Acid.cs" />
+    <Compile Include="Paizo\Advanced.cs" />
+    <Compile Include="Paizo\AdvancedHD.cs" />
+    <Compile Include="AdvancedBestiary\Bramble.cs" />
+    <Compile Include="AdvancedBestiary\FireInfused.cs" />
+    <Compile Include="AdvancedBestiary\GoldClad.cs" />
+    <Compile Include="AdvancedBestiary\DreadZombie.cs" />
+    <Compile Include="AdvancedBestiary\DreadWight.cs" />
+    <Compile Include="AdvancedBestiary\BloodKnight.cs" />
+    <Compile Include="AdvancedBestiary\DreadGhoul.cs" />
+    <Compile Include="AdvancedBestiary\DreadGhost.cs" />
+    <Compile Include="AdvancedBestiary\DreadMummy.cs" />
+    <Compile Include="AdvancedBestiary\FortuneSpurned.cs" />
+    <Compile Include="AdvancedBestiary\Bipedal.cs" />
+    <Compile Include="AdvancedBestiary\Icy.cs" />
+    <Compile Include="AdvancedBestiary\Dust.cs" />
+    <Compile Include="AdvancedBestiary\AirInfused.cs" />
+    <Compile Include="AdvancedBestiary\DreadSkeleton.cs" />
+    <Compile Include="AdvancedBestiary\BrassClad.cs" />
+    <Compile Include="AdvancedBestiary\Flesh.cs" />
+    <Compile Include="AdvancedBestiary\Eldritch.cs" />
+    <Compile Include="Paizo\Divine.cs" />
+    <Compile Include="AdvancedBestiary\DreadLacedon.cs" />
+    <Compile Include="AdvancedBestiary\DreadGhast.cs" />
+    <Compile Include="AdvancedBestiary\DreadWraithSovereign.cs" />
+    <Compile Include="Paizo\Enlarged.cs" />
+    <Compile Include="Entothrope\AfflictedWereassassinbug.cs" />
+    <Compile Include="Paizo\Degenerate.cs" />
+    <Compile Include="DevilBound\ErinyesDevilBound.cs" />
+    <Compile Include="AdvancedBestiary\DreamCreature.cs" />
+    <Compile Include="Paizo\Foo.cs" />
+    <Compile Include="Paizo\Ghoulish.cs" />
+    <Compile Include="Paizo\HivemindSwarm.cs" />
+    <Compile Include="Paizo\Mutant.cs" />
+    <Compile Include="Paizo\Petitioner.cs" />
+    <Compile Include="Paizo\Ravenous.cs" />
+    <Compile Include="AdvancedBestiary\SilvansheeInvested.cs" />
+    <Compile Include="Zombies\PyreZombie.cs" />
+    <Compile Include="Paizo\Resolute.cs" />
+    <Compile Include="SimpleClass\Druid.cs" />
+    <Compile Include="Paizo\Fungal.cs" />
+    <Compile Include="Paizo\Gallowdead.cs" />
+    <Compile Include="Paizo\Shadow.cs" />
+    <Compile Include="Paizo\Simulacrum.cs" />
+    <Compile Include="SkeletalChampion\BloodySkeletalChampion.cs" />
+    <Compile Include="SimpleClass\Sorcerer.cs" />
+    <Compile Include="TomeOfHorrorsComplete\SkeletonWarrior.cs" />
+    <Compile Include="Paizo\Unhallowed.cs" />
+    <Compile Include="SimpleClass\Wizard.cs" />
+    <Compile Include="Zombies\PlagueZombie.cs" />
+    <Compile Include="Zombies\BrainEatingZombie.cs" />
+    <Compile Include="Skeletons\BloodySkeleton.cs" />
+    <Compile Include="Lycanthrope\AfflictedWeretiger.cs" />
+    <Compile Include="Paizo\HalfCelestial.cs" />
+    <Compile Include="Paizo\HeresyDevilBound.cs" />
+    <Compile Include="Lycanthrope\AfflictedWererat.cs" />
+    <Compile Include="Lycanthrope\AfflictedWerewolf.cs" />
+    <Compile Include="Lycanthrope\NaturalWeredeinonychus.cs" />
+    <Compile Include="AdvancedBestiary\NegativeEnergyCharged.cs" />
+    <Compile Include="AdvancedBestiary\Muck.cs" />
+    <Compile Include="AdvancedBestiary\PlagueBearer.cs" />
+    <Compile Include="AdvancedBestiary\MithralClad.cs" />
+    <Compile Include="Paizo\ManaWastesMutant.cs" />
+    <Compile Include="AdvancedBestiary\Manimal.cs" />
+    <Compile Include="Paizo\PlaguedBeast.cs" />
+    <Compile Include="AdvancedBestiary\QuasitPossessed.cs" />
+    <Compile Include="AdvancedBestiary\Quickling.cs" />
+    <Compile Include="AdvancedBestiary\PlatinumClad.cs" />
+    <Compile Include="Zombies\RelentlessZombie.cs" />
+    <Compile Include="AdvancedBestiary\Saurian.cs" />
+    <Compile Include="Paizo\ShrineBlessed.cs" />
+    <Compile Include="Skeletons\BurningSkeleton.cs" />
+    <Compile Include="Lycanthrope\AfflictedWereboar.cs" />
+    <Compile Include="Paizo\Awakened.cs" />
+    <Compile Include="DevilBound\BeardedDevilBound.cs" />
+    <Compile Include="AdvancedBestiary\BrokenSoul.cs" />
+    <Compile Include="AdvancedBestiary\DivineGuardian.cs" />
+    <Compile Include="Skeletons\ExplodingSkeleton.cs" />
+    <Compile Include="AdvancedBestiary\Swarm.cs" />
+    <Compile Include="AdvancedBestiary\StoneIdol.cs" />
+    <Compile Include="Paizo\Terror.cs" />
+    <Compile Include="AdvancedBestiary\WarMachine.cs" />
+    <Compile Include="Zombies\FastZombie.cs" />
+    <Compile Include="Paizo\Fiendish.cs" />
+    <Compile Include="Paizo\HalfSuccubus.cs" />
+    <Compile Include="DevilBound\HornedDevilBound.cs" />
+    <Compile Include="Lycanthrope\NaturalWererat.cs" />
+    <Compile Include="Paizo\Nightmare.cs" />
+    <Compile Include="Paizo\NightmareLord.cs" />
+    <Compile Include="SimpleClass\Rogue.cs" />
+    <Compile Include="SimpleClass\Fighter.cs" />
+    <Compile Include="Paizo\Ghost.cs" />
+    <Compile Include="Paizo\Giant.cs" />
+    <Compile Include="Paizo\Graveknight.cs" />
+    <Compile Include="Paizo\HalfFiend.cs" />
+    <Compile Include="Paizo\JiangShiVampire.cs" />
+    <Compile Include="Paizo\Jotunblood.cs" />
+    <Compile Include="Paizo\JujuZombie.cs" />
+    <Compile Include="Paizo\Lich.cs" />
+    <Compile Include="Paizo\Mummified.cs" />
+    <Compile Include="Paizo\MummyLord.cs" />
+    <Compile Include="Paizo\Nosferatu.cs" />
+    <Compile Include="Paizo\Ogrekin.cs" />
+    <Compile Include="Paizo\Penanggalen.cs" />
+    <Compile Include="Paizo\Ravener.cs" />
+    <Compile Include="Paizo\ShieldGuardian.cs" />
+    <Compile Include="SkeletalChampion\SkeletalChampion.cs" />
+    <Compile Include="Skeletons\Skeleton.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Paizo\TemplateCommon.cs" />
+    <Compile Include="Paizo\Vampire.cs" />
+    <Compile Include="Paizo\WormThatWalks.cs" />
+    <Compile Include="Paizo\Young.cs" />
+    <Compile Include="Zombies\Zombie.cs" />
+    <Compile Include="Paizo\ZombieLord.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y "$(ProjectDir)$(OutDir)$(TargetFileName)" "..\..\..\..\Libraries\Dynamic\"
+xcopy /y "$(TargetDir)$(TargetName).pdb" "..\..\..\..\Libraries\Dynamic\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

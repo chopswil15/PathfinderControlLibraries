@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{39FF2041-705B-41F3-AC05-B98CD1D0F434}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StatBlockChecker</RootNamespace>
+    <AssemblyName>StatBlockChecker</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AbilityScores, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\AbilityScores.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassFoundation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\ClassFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\ClassManager.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonInterFacesDD, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\CommonInterFacesDD.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonStatBlockInfo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\CommonStatBlockInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonStrings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\CommonStrings.dll</HintPath>
+    </Reference>
+    <Reference Include="CreatureTypeFoundation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\CreatureTypeFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="CreatureTypeManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\CreatureTypeManager.dll</HintPath>
+    </Reference>
+    <Reference Include="EquipmentBasic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\EquipmentBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="EquipmentInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\EquipmentInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="FeatFoundation">
+      <HintPath>..\Libraries\FeatFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="FeatManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\FeatManager.dll</HintPath>
+    </Reference>
+    <Reference Include="MagicItemAbilityWrapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\MagicItemAbilityWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="OnGoing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\OnGoing.dll</HintPath>
+    </Reference>
+    <Reference Include="PathfinderDomains, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\PathfinderDomains.dll</HintPath>
+    </Reference>
+    <Reference Include="PathfinderGlobals">
+      <HintPath>..\Libraries\PathfinderGlobals.dll</HintPath>
+    </Reference>
+    <Reference Include="RaceFoundation">
+      <HintPath>..\Libraries\RaceFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="RaceManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\RaceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Skills, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Skills.dll</HintPath>
+    </Reference>
+    <Reference Include="StatBlockBusiness">
+      <HintPath>..\Libraries\StatBlockBusiness.dll</HintPath>
+    </Reference>
+    <Reference Include="StatBlockCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\StatBlockCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TemplateFoundation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\TemplateFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="TemplateManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\TemplateManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArmorClassData.cs" />
+    <Compile Include="Checkers\ArmorClassChecker.cs" />
+    <Compile Include="Checkers\BaseAbilityScoresChecker.cs" />
+    <Compile Include="Checkers\ClassChecker.cs" />
+    <Compile Include="Checkers\ClassSpellChecker.cs" />
+    <Compile Include="Checkers\CombatManeuversChecker.cs" />
+    <Compile Include="Checkers\FavoredClassChecker.cs" />
+    <Compile Include="Checkers\FeatChecker.cs" />
+    <Compile Include="Checkers\HDModifierChecker.cs" />
+    <Compile Include="Interfaces\IInitModValueChecker.cs" />
+    <Compile Include="Interfaces\IHitDiceChecker.cs" />
+    <Compile Include="Interfaces\IHitDiceCheckerOutput.cs" />
+    <Compile Include="Interfaces\IHDModifierChecker.cs" />
+    <Compile Include="Interfaces\IFeatChecker.cs" />
+    <Compile Include="Interfaces\IFeatCheckerInput.cs" />
+    <Compile Include="Interfaces\IClassSpellChecker.cs" />
+    <Compile Include="Interfaces\IBaseAbilityScoresChecker.cs" />
+    <Compile Include="Interfaces\IClassChecker.cs" />
+    <Compile Include="Interfaces\IResistanceChecker.cs" />
+    <Compile Include="Interfaces\ISpaceReachChecker.cs" />
+    <Compile Include="Interfaces\ITemplateChecker.cs" />
+    <Compile Include="Interfaces\ICombatManeuversChecker.cs" />
+    <Compile Include="Interfaces\ICombatManeuversCheckerInput.cs" />
+    <Compile Include="Interfaces\IFavoredClassChecker.cs" />
+    <Compile Include="Interfaces\IMeleeWeaponCheckerInput.cs" />
+    <Compile Include="Checkers\InitModValueChecker.cs" />
+    <Compile Include="Interfaces\IRangedWeaponChecker.cs" />
+    <Compile Include="Interfaces\ISavesChecker.cs" />
+    <Compile Include="Interfaces\IWeaponChecker.cs" />
+    <Compile Include="Checkers\SavesChecker.cs" />
+    <Compile Include="Checkers\HitDiceChecker.cs" />
+    <Compile Include="Checkers\SpaceReachChecker.cs" />
+    <Compile Include="EquipmentData.cs" />
+    <Compile Include="HitDiceHitPointData.cs" />
+    <Compile Include="Interfaces\IArmorClassData.cs" />
+    <Compile Include="Interfaces\IEquipmentData.cs" />
+    <Compile Include="Interfaces\IHitDiceHitPointData.cs" />
+    <Compile Include="Interfaces\IMonSBSearch.cs" />
+    <Compile Include="Interfaces\ISBCheckerBaseInput.cs" />
+    <Compile Include="Interfaces\ISizeData.cs" />
+    <Compile Include="Interfaces\ISpellsData.cs" />
+    <Compile Include="Parsers\ACModParser.cs" />
+    <Compile Include="Parsers\BeforeCombatMagicParser.cs" />
+    <Compile Include="Parsers\BeforeCombatParser.cs" />
+    <Compile Include="Parsers\ConstantSpellsParser.cs" />
+    <Compile Include="Parsers\EquipmentParser.cs" />
+    <Compile Include="Messages\IMessageXML.cs" />
+    <Compile Include="Checkers\MeleeWeaponChecker.cs" />
+    <Compile Include="Messages\MessageInfo.cs" />
+    <Compile Include="Messages\MessageXML.cs" />
+    <Compile Include="MonSBSearch.cs" />
+    <Compile Include="Checkers\RangedWeaponChecker.cs" />
+    <Compile Include="Checkers\ResistanceChecker.cs" />
+    <Compile Include="Parsers\FavoredClassParser.cs" />
+    <Compile Include="Parsers\FeatParser.cs" />
+    <Compile Include="Interfaces\IACModParser.cs" />
+    <Compile Include="Interfaces\IBeforeCombatMagicParser.cs" />
+    <Compile Include="Interfaces\IBeforeCombatParser.cs" />
+    <Compile Include="Interfaces\IConstantSpellsParser.cs" />
+    <Compile Include="Interfaces\IEquipmentParser.cs" />
+    <Compile Include="Interfaces\IFavoredClassData.cs" />
+    <Compile Include="Interfaces\IRaceParser.cs" />
+    <Compile Include="Parsers\RaceParser.cs" />
+    <Compile Include="SBChecker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SBCheckerBaseInput.cs" />
+    <Compile Include="SizeData.cs" />
+    <Compile Include="Interfaces\ISkillCalculation.cs" />
+    <Compile Include="Interfaces\ISkillMods.cs" />
+    <Compile Include="Interfaces\ISkillsChecker.cs" />
+    <Compile Include="Skills\IMaxSkillRanksComputer.cs" />
+    <Compile Include="Skills\ISkillsParser.cs" />
+    <Compile Include="Skills\MaxSkillRanksComputer.cs" />
+    <Compile Include="Skills\SkillCalculation.cs" />
+    <Compile Include="Skills\SkillMods.cs" />
+    <Compile Include="Skills\SkillsChecker.cs" />
+    <Compile Include="Checkers\SpellChecker.cs" />
+    <Compile Include="Skills\SkillsParser.cs" />
+    <Compile Include="SpellsData.cs" />
+    <Compile Include="StatBlockMessageWrapper.cs" />
+    <Compile Include="Checkers\TemplateChecker.cs" />
+    <Compile Include="Checkers\WeaponChecker.cs" />
+    <Compile Include="TotalArmorCheckPenaltyComputer.cs" />
+    <Compile Include="WeaponCommon.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EquipmentBusiness\EquipmentBusiness.csproj">
+      <Project>{AA8B479C-7AE9-4155-8FF9-724CD3D69387}</Project>
+      <Name>EquipmentBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StatBlockParsing\StatBlockParsing.csproj">
+      <Project>{D16FB54D-DE91-400A-B27E-07BD143808C1}</Project>
+      <Name>StatBlockParsing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y "$(ProjectDir)$(OutDir)$(TargetFileName)" "..\..\..\Libraries\"
+xcopy /y "$(TargetDir)$(TargetName).pdb" "..\..\..\Libraries\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

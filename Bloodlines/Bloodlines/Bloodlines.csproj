@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8537FCB2-9132-4C5A-B488-2F9371F9F45B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bloodlines</RootNamespace>
+    <AssemblyName>Bloodlines</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OnGoing">
+      <HintPath>..\..\..\..\Visual Studio 2015\Projects\Libraries\OnGoing.dll</HintPath>
+    </Reference>
+    <Reference Include="Skills">
+      <HintPath>..\..\..\..\Visual Studio 2015\Projects\Libraries\Skills.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aberrant.cs" />
+    <Compile Include="Bloodrager\AberrantBloodrager.cs" />
+    <Compile Include="Abyssal.cs" />
+    <Compile Include="Accursed.cs" />
+    <Compile Include="Aquatic.cs" />
+    <Compile Include="Arcane.cs" />
+    <Compile Include="Boreal.cs" />
+    <Compile Include="Celestial.cs" />
+    <Compile Include="DeepEarth.cs" />
+    <Compile Include="Destined.cs" />
+    <Compile Include="Draconic.cs" />
+    <Compile Include="Dreamspun.cs" />
+    <Compile Include="Efreeti.cs" />
+    <Compile Include="Elemental.cs" />
+    <Compile Include="Fey.cs" />
+    <Compile Include="Ghoul.cs" />
+    <Compile Include="IBloodline.cs" />
+    <Compile Include="Infernal.cs" />
+    <Compile Include="Kobold.cs" />
+    <Compile Include="Pestilence.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protean.cs" />
+    <Compile Include="Psychic.cs" />
+    <Compile Include="Rakshasa.cs" />
+    <Compile Include="Serpentine.cs" />
+    <Compile Include="Shadow .cs" />
+    <Compile Include="Shaitan.cs" />
+    <Compile Include="Starsoul.cs" />
+    <Compile Include="Stormborn.cs" />
+    <Compile Include="Undead.cs" />
+    <Compile Include="Verdant.cs" />
+    <Compile Include="Verminous.cs" />
+    <Compile Include="VoidTouched.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y "$(ProjectDir)$(OutDir)$(TargetFileName)" "..\..\..\..\Libraries\Dynamic\"
+xcopy /y "$(TargetDir)$(TargetName).pdb" "..\..\..\..\Libraries\Dynamic\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

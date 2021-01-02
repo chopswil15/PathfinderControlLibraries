@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40395776-6873-484A-A475-3C01D8075B0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StatBlockFormating</RootNamespace>
+    <AssemblyName>StatBlockFormating</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonStatBlockInfo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\CommonStatBlockInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonStrings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\CommonStrings.dll</HintPath>
+    </Reference>
+    <Reference Include="PathfinderContext, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\PathfinderContext.dll</HintPath>
+    </Reference>
+    <Reference Include="PathfinderGlobals">
+      <HintPath>..\Libraries\PathfinderGlobals.dll</HintPath>
+    </Reference>
+    <Reference Include="StatBlockCommon">
+      <HintPath>..\Libraries\StatBlockCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utilities">
+      <HintPath>..\Libraries\Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AfflictionStatBlock_Format.cs" />
+    <Compile Include="FeatStatBlock_Format.cs" />
+    <Compile Include="FormatSpecialAbilitiesOld.cs" />
+    <Compile Include="Interfaces\IAfflictionStatBlock_Format.cs" />
+    <Compile Include="Interfaces\IFeatStatBlock_Format.cs" />
+    <Compile Include="Interfaces\IIndividualStatBlock_Format.cs" />
+    <Compile Include="Interfaces\IMagicItemStatBlock_Format.cs" />
+    <Compile Include="Interfaces\IMonsterStatBlock_Format.cs" />
+    <Compile Include="IndividualStatBlock_Format.cs" />
+    <Compile Include="Interfaces\ISpellStatBlock_Format.cs" />
+    <Compile Include="MagicItemStatBlock_Format.cs" />
+    <Compile Include="MonsterStatBlock_Format.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpellStatBlock_Format.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y "$(ProjectDir)$(OutDir)$(TargetFileName)" "..\..\..\Libraries\"
+xcopy /y "$(TargetDir)$(TargetName).pdb" "..\..\..\Libraries\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

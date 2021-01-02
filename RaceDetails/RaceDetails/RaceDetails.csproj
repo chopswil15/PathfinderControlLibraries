@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D4485E6-4568-4EC2-AD47-88FFE5AFBFDB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RaceDetails</RootNamespace>
+    <AssemblyName>RaceDetails</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonStatBlockInfo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\CommonStatBlockInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="OnGoing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\OnGoing.dll</HintPath>
+    </Reference>
+    <Reference Include="RaceFoundation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\RaceFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AzataBloodedAasimar.cs" />
+    <Compile Include="OtherSources\Kuru.cs" />
+    <Compile Include="OtherSources\AquaticElf.cs" />
+    <Compile Include="OtherSources\Kasatha.cs" />
+    <Compile Include="OtherSources\Gathlain.cs" />
+    <Compile Include="OtherSources\Changeling.cs" />
+    <Compile Include="OtherSources\Gillman.cs" />
+    <Compile Include="OtherSources\MonkeyGoblin.cs" />
+    <Compile Include="OtherSources\Lashunta.cs" />
+    <Compile Include="OtherSources\Ghoran.cs" />
+    <Compile Include="OtherSources\Android.cs" />
+    <Compile Include="OtherSources\Catfolk.cs" />
+    <Compile Include="OtherSources\Oread.cs" />
+    <Compile Include="OtherSources\Ifrit.cs" />
+    <Compile Include="OtherSources\Grippli.cs" />
+    <Compile Include="OtherSources\Fetchling.cs" />
+    <Compile Include="OtherSources\Dhampir.cs" />
+    <Compile Include="OtherSources\Orc.cs" />
+    <Compile Include="OtherSources\Merfolk.cs" />
+    <Compile Include="OtherSources\Hobgoblin.cs" />
+    <Compile Include="OtherSources\Kobold.cs" />
+    <Compile Include="OtherSources\Goblin.cs" />
+    <Compile Include="OtherSources\Duergar.cs" />
+    <Compile Include="OtherSources\Drow.cs" />
+    <Compile Include="OtherSources\DrowNoble.cs" />
+    <Compile Include="OtherSources\Aasimar.cs" />
+    <Compile Include="Azlanti.cs" />
+    <Compile Include="AzlantiHuman.cs" />
+    <Compile Include="Core\Human.cs" />
+    <Compile Include="Core\Dwarf.cs" />
+    <Compile Include="Core\Elf.cs" />
+    <Compile Include="Core\Gnome.cs" />
+    <Compile Include="Core\HalfElf.cs" />
+    <Compile Include="Core\Halfling.cs" />
+    <Compile Include="Core\HalfOrc.cs" />
+    <Compile Include="DragonEmpires\Kitsune.cs" />
+    <Compile Include="DragonEmpires\Nagaji.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DragonEmpires\Samsaran.cs" />
+    <Compile Include="DragonEmpires\Wayang.cs" />
+    <Compile Include="OtherSources\Svirfneblin.cs" />
+    <Compile Include="OtherSources\Tengu.cs" />
+    <Compile Include="OtherSources\Tiefling.cs" />
+    <Compile Include="OtherSources\Sylph.cs" />
+    <Compile Include="OtherSources\Undine.cs" />
+    <Compile Include="OtherSources\Ratfolk.cs" />
+    <Compile Include="OtherSources\Suli.cs" />
+    <Compile Include="OtherSources\Vanara.cs" />
+    <Compile Include="OtherSources\Vishkanya.cs" />
+    <Compile Include="OtherSources\Syrinx.cs" />
+    <Compile Include="OtherSources\Strix.cs" />
+    <Compile Include="OtherSources\Triaxian.cs" />
+    <Compile Include="OtherSources\Trox.cs" />
+    <Compile Include="OtherSources\Wyrwood.cs" />
+    <Compile Include="OtherSources\Wyvaran.cs" />
+    <Compile Include="PurebloodedAzlantiHuman.cs" />
+    <Compile Include="OtherSources\Shabti.cs" />
+    <Compile Include="Silid.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y "$(ProjectDir)$(OutDir)$(TargetFileName)" "..\..\..\..\Libraries\Dynamic\"
+xcopy /y "$(TargetDir)$(TargetName).pdb" "..\..\..\..\Libraries\Dynamic\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
