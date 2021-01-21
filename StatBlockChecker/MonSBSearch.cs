@@ -83,7 +83,7 @@ namespace StatBlockChecker
             _classArchetypes = MonSB.ClassArchetypes.ToLower();
             _SQ = MonSB.SQ;
             Utility.ParenCommaFix(ref _SQ);
-            SQ = _SQ.Split(',').ToList();
+            SQ = _SQ.Split(',').Select(p => p.Trim()).ToList();
             _onGoingModifers = OnGoingModifers;
             _domains = MonSB.SpellDomains;
             _subType = MonSB.SubType;
@@ -737,12 +737,7 @@ namespace StatBlockChecker
 
         public bool HasSpecialAttack(string specialAttackName)
         {
-            foreach (string SA in SpecialAttacks)
-            {
-                if (SA.Contains(specialAttackName)) return true;
-            }
-
-            return false;
+            return SpecialAttacks.Contains(specialAttackName);           
         }
 
         public bool HasDeed(string deedName)
@@ -772,14 +767,12 @@ namespace StatBlockChecker
         }
 
         public string GetSpecialAttack(string specialAttackName)
-        {
-            foreach (string SA in SpecialAttacks)
+        {           
+            if (SpecialAttacks.Contains(specialAttackName))
             {
-                if (SA.Contains(specialAttackName) && SA.IndexOf(specialAttackName) == 0)
-                {
-                    return SA;
-                }
-            }
+                var findSA = SpecialAttacks.Where(x => x.Contains(specialAttackName)).FirstOrDefault();
+                if (!string.IsNullOrEmpty(findSA)) return findSA;
+            }           
 
             return string.Empty;
         }
@@ -788,10 +781,8 @@ namespace StatBlockChecker
         {
             if (_SQ.Contains(sqName))
             {
-                foreach (string sq in SQ)
-                {
-                    if (sq.Contains(sqName)) return sq;
-                }
+                var findSQ =SQ.Where(x => x.Contains(sqName)).FirstOrDefault();
+                if (!string.IsNullOrEmpty(findSQ)) return findSQ;
             }
 
             return string.Empty;

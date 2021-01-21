@@ -1307,10 +1307,10 @@ namespace StatBlockChecker
                 string smiteEvil = _sbCheckerBaseInput.MonsterSBSearch.GetSpecialAttack("smite evil");
                 smiteEvil = smiteEvil.Replace("smite evil", string.Empty);
                 int Pos = smiteEvil.IndexOf(PathfinderConstants.PAREN_LEFT);
-                smiteEvil = smiteEvil.Substring(0, Pos).Trim();
+                if(Pos > 0) smiteEvil = smiteEvil.Substring(0, Pos).Trim();
                 smiteEvil = smiteEvil.Replace("/day", string.Empty);
-                int smiteEvilSB = int.Parse(smiteEvil);
-
+                int smiteEvilSB;
+                int.TryParse(smiteEvil, out smiteEvilSB);
 
                 int smiteEvilCount = 1;
                 if (paladinLevel >= 4) smiteEvilCount++;
@@ -1766,12 +1766,13 @@ namespace StatBlockChecker
             else //lay on hands 3/day (1d6)
             {
                 int Pos = SB_LOH.IndexOf(PathfinderConstants.PAREN_LEFT);
-                SB_LOH = SB_LOH.Substring(Pos);
+                if(Pos > 0) SB_LOH = SB_LOH.Substring(Pos);
                 SB_LOH = SB_LOH.Replace("lay on hands", string.Empty);
             }
             SB_LOH = SB_LOH.Replace("/day", string.Empty);
             SB_LOH = Utility.RemoveParentheses(SB_LOH);
-            int LOHCount = int.Parse(SB_LOH);
+            int LOHCount;
+            int.TryParse(SB_LOH, out LOHCount);
             if (_sbCheckerBaseInput.MonsterSBSearch.HasFeat("Extra Lay on Hands")) LOH += 2;
 
             if (LOHCount == LOH)
@@ -1814,7 +1815,8 @@ namespace StatBlockChecker
                 SB_LOH = SB_LOH.Replace("lay on hands", string.Empty).Replace("d6", string.Empty)
                     .Replace(PathfinderConstants.PAREN_LEFT, string.Empty).Trim();
 
-                int damageSB = int.Parse(SB_LOH);
+                int damageSB;
+                int.TryParse(SB_LOH,out damageSB);
                 int damage = paladinLevel / 2;
 
                 if (damageSB == damage)
