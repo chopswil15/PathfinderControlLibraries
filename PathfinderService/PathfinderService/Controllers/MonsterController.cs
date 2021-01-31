@@ -1,18 +1,17 @@
-﻿using System;
+﻿using PathfinderContext.Services;
+using PathfinderDomains;
+using StatBlockBusiness;
+using StatBlockChecker;
+using StatBlockCommon.Individual_SB;
+using StatBlockCommon.Monster_SB;
+using StatBlockParsing;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Web.Configuration;
 using System.Web.Http;
 using System.Xml;
-using PathfinderContext.Services;
-using PathfinderDomains;
-using StatBlockChecker;
-using StatBlockCommon.Individual_SB;
-using StatBlockCommon.Monster_SB;
-using StatBlockCommon;
-using StatBlockParsing;
-using StatBlockBusiness;
 
 namespace PathfinderService.Controllers
 {

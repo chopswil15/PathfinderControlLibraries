@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using PathfinderContext.Services;
 using System.Web.Configuration;
 using System.Web.Http;
-using PathfinderContext.Services;
 
 namespace PathfinderService.Controllers
 {
