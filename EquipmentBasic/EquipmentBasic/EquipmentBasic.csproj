@@ -34,9 +34,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\..\PathfinderControlLibraries\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="CommonInterFacesDD, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libraries\CommonInterFacesDD.dll</HintPath>
@@ -48,9 +45,6 @@
     <Reference Include="CommonStrings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libraries\CommonStrings.dll</HintPath>
-    </Reference>
-    <Reference Include="PathfinderContext">
-      <HintPath>..\..\..\..\Visual Studio 2015\Projects\Libraries\PathfinderContext.dll</HintPath>
     </Reference>
     <Reference Include="PathfinderDomains">
       <HintPath>..\..\..\..\Visual Studio 2015\Projects\Libraries\PathfinderDomains.dll</HintPath>
