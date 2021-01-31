@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using StatBlockCommon.Monster_SB;
-using StatBlockCommon;
 using StatBlockParsing;
 
 namespace StatBlockChecker
