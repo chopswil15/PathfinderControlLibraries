@@ -310,11 +310,11 @@ namespace StatBlockCommon.Individual_SB
             if (Class.Length != 0)
             {
                 //string temp = Classes;
-                CharacterClasses = new ClassMaster(Class, SpellDomains, Mystery,Bloodline, Patron);
+                CharacterClasses = new ClassMaster( new ClassMasterInput(Class,SpellDomains,Mystery,Bloodline,Patron ));
             }
             else
             {
-                CharacterClasses = new ClassMaster(string.Empty, string.Empty, string.Empty, string.Empty, string.Empty);
+                CharacterClasses = new ClassMaster(new ClassMasterInput(string.Empty, string.Empty, string.Empty, string.Empty, string.Empty));
             }
         }
         

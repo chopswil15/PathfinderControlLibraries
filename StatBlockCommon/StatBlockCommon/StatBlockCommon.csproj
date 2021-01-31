@@ -34,8 +34,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClassManager">
-      <HintPath>..\..\..\..\Visual Studio 2015\Projects\Libraries\ClassManager.dll</HintPath>
+    <Reference Include="ClassManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\ClassManager.dll</HintPath>
     </Reference>
     <Reference Include="CommonInterFacesDD, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
