@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Reflection;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
@@ -24,10 +25,13 @@ namespace NHibernateLibraries
             }
         }
 
-        public NHibernateHelper(string connectionString,string AssemblyNameWithClassMapper)
+        public NHibernateHelper(string connectionString, string assemblyNameWithClassMapper)
         {
+            if (string.IsNullOrEmpty(connectionString)) throw new Exception("connectionString is empty");
+            if (string.IsNullOrEmpty(assemblyNameWithClassMapper)) throw new Exception("assemblyNameWithClassMapper is empty");
+
             _connectionString = connectionString;
-            _assemblyNameWithClassMapper = AssemblyNameWithClassMapper;
+            _assemblyNameWithClassMapper = assemblyNameWithClassMapper;
         }
 
         private ISessionFactory CreateSessionFactory()
@@ -38,11 +42,11 @@ namespace NHibernateLibraries
                 .BuildSessionFactory();
         }
 
-        private ISessionFactory CreateSessionFactory(string AssemblyNameWithClassMapper)
+        private ISessionFactory CreateSessionFactory(string assemblyNameWithClassMapper)
         {
             return Fluently.Configure()
                 .Database(MsSqlConfiguration.MsSql2008.ConnectionString(_connectionString))
-                .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.Load(AssemblyNameWithClassMapper)))
+                .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.Load(assemblyNameWithClassMapper)))
                 .BuildSessionFactory();
         }
     }
