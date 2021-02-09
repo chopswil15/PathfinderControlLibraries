@@ -8,11 +8,12 @@ using System.Web.Http;
 
 namespace PathfinderService.Controllers
 {
+    [Route("[controller]")]
     public class FeatsController : ApiController
     {
         private IFeatService _featService;
 
-        [Route("feats/{id}")]
+        [Route("GetFeatByID")]
         [HttpGet]
         public IHttpActionResult GetFeatByID(int id)
         {
