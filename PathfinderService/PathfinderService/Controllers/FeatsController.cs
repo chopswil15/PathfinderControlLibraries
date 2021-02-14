@@ -23,7 +23,7 @@ namespace PathfinderService.Controllers
             return Ok(feat);
         }
 
-        [Route("feats/name/{name}")]
+        [Route("GetFeatByName")]
         [HttpGet]
         public IHttpActionResult GetFeatByName(string name)
         {
@@ -33,7 +33,7 @@ namespace PathfinderService.Controllers
             return Ok(feat);
         }
 
-        [Route("feats/name/mythic/{nameMythic}")]
+        [Route("GetMythicFeatByName")]
         [HttpGet]
         public IHttpActionResult GetMythicFeatByName(string nameMythic)
         {
@@ -43,7 +43,7 @@ namespace PathfinderService.Controllers
             return Ok(feat);
         }
 
-        [Route("feats/name/{name}/source/{source}")]
+        [Route("GetFeatByNameSource")]
         [HttpGet]
         public IHttpActionResult GetFeatByNameSource(string name, string source)
         {
